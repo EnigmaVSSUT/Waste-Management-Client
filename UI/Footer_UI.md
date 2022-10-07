@@ -1,0 +1,2 @@
+[Footer_UI_Link-Figma]
+ (https://www.figma.com/file/jQ087zOfviytZw87LFyKVe/Footer-Waste-Management?node-id=0%3A1) 
