@@ -3,7 +3,8 @@ There are many dustbins around us and we see they are cleared at certain interva
 
 Since we don't have a single platform where we could track and register new complaints, we find it difficult to do anything related to the problem. Thus we are making a platform which will be used as a pilot project for different campus to track the complaints in a very efficent and easy way. For building the platform we are basically using NodeJs. 
 
-The user interface of the platform is inside the [UI](https://github.com/EnigmaVSSUT/Waste-Management-Client/tree/main/UI) directory. Please follow it strictly for your contribution.
+The user interface of the platform is inside the [UI](https://github.com/EnigmaVSSUT/Waste-Management-Client/tree/main/UI) directory. Please follow it strictly for your contribution. 
+#### Designs :[FIGMA](https://www.figma.com/proto/MVSKfP79rq96dduCr2D154/WMS-Client?page-id=0%3A1&node-id=27%3A48&starting-point-node-id=27%3A48&scaling=scale-down)
 
 ### Make sure to register yourself on  [Hacktoberfest](https://hacktoberfest.com/auth/)
 Tech Domains for contribution:
