@@ -3,6 +3,11 @@ const components = {
 		defaultProps: {
 			disableUnderline: true,
 		}
+	},
+	MuiAppBar: {
+		defaultProps: {
+			elevation: 0
+		}
 	}
 }
 
