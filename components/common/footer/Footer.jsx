@@ -1,4 +1,4 @@
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Divider, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 import footerLinks from "../../../lib/data/footer-links";
@@ -113,6 +113,19 @@ const Footer = () => {
 			bgcolor='primary.10'
 		>
 			<Content />
+			<Divider 
+				flexItem
+				sx={{
+					borderColor: 'outline.500'
+				}}
+			/>
+			<Typography
+				variant='body.large'
+				textAlign='center'
+				color='common.white'
+			>
+				Made with passion by Enigma VSSUT &copy; 2022
+			</Typography>
 		</Stack>
 	);
 }

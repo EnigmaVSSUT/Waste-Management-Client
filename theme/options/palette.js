@@ -13,6 +13,9 @@ const palette = {
 	},
 	text: {
 		surface: '#f00'
+	},
+	outline: {
+		500: '#73796E'
 	}
 }
  export default palette
