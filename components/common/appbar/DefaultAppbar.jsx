@@ -43,8 +43,21 @@ const DefaultAppBar = () => {
 					<Stack>
 						<Typography
 							variant='headline.small'
+							display={{
+								xs: 'none',
+								md: 'block'
+							}}
 						>
 							Veer Surendra Sai University of Technology
+						</Typography>
+						<Typography
+							variant='headline.small'
+							display={{
+								xs: 'block',
+								md: 'none'
+							}}
+						>
+							VSSUT
 						</Typography>
 						<Typography
 							variant='title.small'
