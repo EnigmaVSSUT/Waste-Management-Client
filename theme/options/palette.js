@@ -6,7 +6,8 @@ const palette = {
 		95: '#CBFFB8'
 	},
 	surface: {
-		500: '#ffffff'
+		500: '#FCFDF6',
+		10: 'linear-gradient(0deg, rgba(8, 110, 0, 0.05), rgba(8, 110, 0, 0.05)), #FCFDF6'
 	},
 	neutral: {
 		50: '#767872'

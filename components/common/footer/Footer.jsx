@@ -21,6 +21,7 @@ const FooterLink = ({ item }) => (
 				<Link
 					href={link.href}
 					target={link.target}
+					key={link.text}
 				>
 					<Typography
 						variant='body.large'

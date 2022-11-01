@@ -5,6 +5,18 @@
 
 const typography = {
 	fontFamily: ['Product Sans', 'sans-serif'].join(','),
+	'display.large': {
+		fontFamily: 'Product Sans Bold',
+		fontWeight: 700,
+		fontSize: '57px',
+		lineHeight: '64px'
+	},
+	'display.small': {
+		fontFamily: 'Product Sans',
+		fontWeight: 400,
+		fontSize: '36px',
+		lineHeight: '44px'
+	},
 	'headline.small': {
 		fontFamily: 'Product Sans',
 		fontWeight: 400,
@@ -24,6 +36,12 @@ const typography = {
 		lineHeight: '24px'
 	},
 	'title.small': {
+		fontFamily: 'Product Sans Bold',
+		fontWeight: 700,
+		fontSize: '14px',
+		lineHeight: '20px'
+	},
+	'label.large': {
 		fontFamily: 'Product Sans Bold',
 		fontWeight: 700,
 		fontSize: '14px',
