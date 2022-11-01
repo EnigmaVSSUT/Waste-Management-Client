@@ -11,11 +11,29 @@ const typography = {
 		fontSize: '24px',
 		lineHeight: '32px'
 	},
+	'title.large': {
+		fontFamily: 'Product Sans',
+		fontWeight: 400,
+		fontSize: '22px',
+		lineHeight: '28px'
+	},
+	'title.medium': {
+		fontFamily: 'Product Sans Bold',
+		fontWeight: 700,
+		fontSize: '16px',
+		lineHeight: '24px'
+	},
 	'title.small': {
 		fontFamily: 'Product Sans Bold',
 		fontWeight: 700,
 		fontSize: '14px',
 		lineHeight: '20px'
+	},
+	'body.large': {
+		fontFamily: 'Product Sans',
+		fontWeight: 400,
+		fontSize: '16px',
+		lineHeight: '24px'
 	}
 }
 

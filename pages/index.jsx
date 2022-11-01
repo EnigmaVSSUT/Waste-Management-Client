@@ -1,4 +1,4 @@
-import { Button, Stack } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 
 const Index = () => {
 	return (
@@ -6,7 +6,6 @@ const Index = () => {
 			padding='64px 32px'
 			gap='32px'
 		>
-
 		</Stack>
 	);
 }

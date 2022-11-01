@@ -1,6 +1,9 @@
 const palette = {
 	primary: {
-		500: '#0C8B00'
+		500: '#0C8B00',
+		10: '#012200',
+		99: '#F7FFEE',
+		95: '#CBFFB8'
 	},
 	surface: {
 		500: '#ffffff'
