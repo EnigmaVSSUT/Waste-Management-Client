@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { LayoutProvider } from "../../../lib/context/LayoutContext";
 import DefaultAppBar from "../appbar/DefaultAppbar";
+import Footer from "../footer/Footer";
 import DefaultSideBar from "../sidebar/DefaultSideBar";
 
 
@@ -18,9 +19,13 @@ const DefaultLayout = ({children}) => {
 			{/* <Offset /> */}
 			<Box
 				component={motion.div}
+				sx={{
+					flexGrow: 1
+				}}
 			>
 				{children}
 			</Box>
+			<Footer />
 			<DefaultSideBar />
 		</Stack>
 	);
