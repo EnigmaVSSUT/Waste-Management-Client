@@ -8,21 +8,35 @@ const Main = () => {
 			padding='64px 32px'
 			gap='32px'
 			sx={(theme) => ({
-				background: theme.palette.surface[10],
+				// background: theme.palette.surface[10],
+				backgroundImage: 'images/landing_page.png',
 			})}
-		>
-			<Stack
+		 >
+			<Image
+					src='/images/landing_page.png'
+					width={700}
+					height={349}
+					style={{
+						width: '100%',
+						maxWidth: '700px',
+					
+					}}
+					alt=""
+				/>
+			{/* <Stack
 				gap='32px'
 				alignItems='center'
 			>
-				<Image 
+				<Image
 					src='/images/cfc-svg.svg'
 					width={700}
 					height={349}
 					style={{
 						width: '100%',
 						maxWidth: '700px',
+					
 					}}
+					alt=""
 				/>
 				<Stack
 					gap='8px'
@@ -73,7 +87,7 @@ const Main = () => {
 						</Button>
 					</Link>
 				</Stack>
-			</Stack>
+			</Stack> */}
 		</Stack>
 	);
 }

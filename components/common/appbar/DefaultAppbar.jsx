@@ -1,5 +1,5 @@
-import { Menu } from "@mui/icons-material";
-import { AppBar, Divider, IconButton, Stack, Toolbar, Typography } from "@mui/material";
+import { CenterFocusStrong, JoinRightSharp, Menu } from "@mui/icons-material";
+import { AppBar, Divider, Button, Stack, Toolbar, Typography, Box, TextField, TabIndicatorProps, Tabs, Tab, Buttons } from "@mui/material";
 import Image from "next/image";
 import { useLayout } from "../../../lib/context/LayoutContext";
 
@@ -10,15 +10,15 @@ const DefaultAppBar = () => {
 		<AppBar
 			position='sticky'
 			color="surface"
-			sx={{
-				borderBottom: '1px solid',
-				borderColor: 'neutral.50'
-			}}
+		// sx={{
+		// 	borderBottom: '1px solid',
+		// 	borderColor: 'neutral.50'
+		// }}
 		>
 			<Toolbar
 				sx={{
 					padding: '24px 32px',
-					// backgroundColor: '#ffffff'
+					backgroundColor: 'transparent',
 				}}
 			>
 				<Stack
@@ -27,12 +27,13 @@ const DefaultAppBar = () => {
 					direction='row'
 					alignItems='center'
 				>
-					<Image 
+					<Image
 						src='/images/vssut_logo.png'
 						width={65}
 						height={65}
+						alt=""
 					/>
-					<Divider 
+					<Divider
 						flexItem
 						sx={{
 							borderWidth: 0,
@@ -41,7 +42,7 @@ const DefaultAppBar = () => {
 						}}
 					/>
 					<Stack>
-						<Typography
+						{/* <Typography
 							variant='headline.small'
 							display={{
 								xs: 'none',
@@ -49,7 +50,8 @@ const DefaultAppBar = () => {
 							}}
 						>
 							Veer Surendra Sai University of Technology
-						</Typography>
+						</Typography> */}
+
 						<Typography
 							variant='headline.small'
 							display={{
@@ -59,13 +61,44 @@ const DefaultAppBar = () => {
 						>
 							VSSUT
 						</Typography>
-						<Typography
-							variant='title.small'
-						>
-							Waste Management System
-						</Typography>
+
+					
 					</Stack>
+
+					{/* new */}
+
+					<Tabs
+						sx={{ marginLeft: "auto" }}
+						indicatorColor="secondary"
+						textColor="black"
+					
+					>
+						{/* <Buttons textColor="black"
+						> */}
+
+						<Tab sx={{
+
+							textColor: "#D97D54"}}
+							 label="Home" />
+						<Tab label="View Complain" />
+						
+						<Button sx={{ marginLeft: "auto",
+					                   textColor:"black" }} variant="outlined" >
+							Admin Login
+						</Button>
+						<Button sx={{ marginLeft: "10px" }} variant="contained">
+							Register Complain
+						</Button>
+						{/* </Buttons> */}
+					</Tabs>
+
+
+				
+
 				</Stack>
+
+				{/* new end  */}
+				{/* </Stack> */}
 			</Toolbar>
 		</AppBar>
 	);
