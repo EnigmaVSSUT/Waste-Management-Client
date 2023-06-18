@@ -1,0 +1,92 @@
+.container{
+    display:flex;
+}
+
+.overview{
+    display:flex;
+    margin-top: 1%;
+    margin-right:40%;
+    width:30%;
+    height:auto;
+    /* background: #df8f8f; */
+}
+.open{
+    margin-right: 25%;
+    margin-left: 2%;
+}
+.open p{
+    margin-left: 20%;
+    font-size: 13px;
+    font-family:'poppins';
+}
+.openNo{
+    margin-left: 20%;
+    margin-top: 35%;
+}
+.progress{
+    margin-right: 25%;
+}
+.progress p{
+    margin-left: 20%;
+    font-size: 10px;
+    font-family:'poppins';
+}
+.progressNo{
+    margin-left: 20%;
+    margin-top: 13%;
+}
+.close{
+    margin-right: 25%;
+}
+.close p{
+    margin-left: 20%;
+    font-size: 13px;
+    font-family:'poppins';
+}
+.closeNo{
+    margin-left: 20%;
+    margin-top: 30%;
+}
+
+.l1{
+    position: absolute;
+    background: black;
+    border-radius: 10px;
+    width: 0.2%;
+    height: 10%;
+    opacity: 0.8;
+}
+.progressChart{
+  margin-top:-2%;
+}
+.percent{
+    margin-top:-60%;
+    margin-left: 35%;
+}
+.greenC{
+    position: absolute;
+    background: green;
+    height:2%;
+    width:1%;
+    margin-left: 3%;
+    margin-top: -1%;
+}
+.colors1{
+    margin-left: 50%;
+    margin-top: -13%;
+    width:100%;
+}
+.whiteC{
+    position: absolute;
+    background:white;
+    border-color: #000000;
+    border-style: solid;
+    height:2%;
+    width:1%;
+    margin-left: 3%;
+    margin-top: 1%;
+}
+.colors2{
+    margin-left: 50%;
+    margin-top: 10%;
+}
