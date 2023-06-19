@@ -1,13 +1,19 @@
 import { CenterFocusStrong, JoinRightSharp, Menu } from "@mui/icons-material";
-import { AppBar, Divider, Button, Stack, Toolbar, Typography, Box, TextField, TabIndicatorProps, Tabs, Tab, Buttons } from "@mui/material";
+import { AppBar, Divider, Button, Stack, Toolbar, Typography, Box, TextField, TabIndicatorProps, Tabs, Tab, Buttons , FormControl} from "@mui/material";
 import Image from "next/image";
 import { useLayout } from "../../../lib/context/LayoutContext";
+// import navres from "./nav";
+
+
+
+
 
 const DefaultAppBar = () => {
 	const { toggleSidebar } = useLayout()
 
-	return (
-		<AppBar
+	return ( 
+		
+		<AppBar 
 			position='sticky'
 			color="surface"
 		// sx={{
@@ -17,8 +23,13 @@ const DefaultAppBar = () => {
 		>
 			<Toolbar
 				sx={{
-					padding: '24px 32px',
+					padding: '7px 30px',
 					backgroundColor: 'transparent',
+					background:'transparent',
+					// background-color:transparent;
+					borderColor:'transparent',
+					// margin-bottom:0px;
+				  
 				}}
 			>
 				<Stack
@@ -66,13 +77,13 @@ const DefaultAppBar = () => {
 					</Stack>
 
 					{/* new */}
-
+					
 					<Tabs
-						sx={{ marginLeft: "auto" }}
+						sx={{ marginLeft: "auto" , maxWidth: "auto" }}
 						indicatorColor="secondary"
 						textColor="black"
-					
-					>
+					    
+					 >
 						{/* <Buttons textColor="black"
 						> */}
 
@@ -83,7 +94,7 @@ const DefaultAppBar = () => {
 						<Tab label="View Complain" />
 						
 						<Button sx={{ marginLeft: "auto",
-					                   textColor:"black" }} variant="outlined" >
+					                   textColor:"black",  }} variant="outlined" >
 							Admin Login
 						</Button>
 						<Button sx={{ marginLeft: "10px" }} variant="contained">
@@ -93,7 +104,7 @@ const DefaultAppBar = () => {
 					</Tabs>
 
 
-				
+					
 
 				</Stack>
 
@@ -101,6 +112,7 @@ const DefaultAppBar = () => {
 				{/* </Stack> */}
 			</Toolbar>
 		</AppBar>
+		
 	);
 }
 
