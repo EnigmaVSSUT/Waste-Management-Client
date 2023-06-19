@@ -3,10 +3,9 @@ import Main from "../components/pages/home/Main";
 
 const Index = () => {
 	return (
-		<Stack
-			
-		>
+		<Stack>
 			<Main />
+			
 		</Stack>
 	);
 }
