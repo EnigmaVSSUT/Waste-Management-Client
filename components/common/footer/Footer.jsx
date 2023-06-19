@@ -14,7 +14,7 @@ const FooterLink = ({ item }) => (
 		>
 			{item.category}
 		</Typography>
-		<Stack
+		<Stack 
 			gap='10px'
 			padding='10px 0'
 		>

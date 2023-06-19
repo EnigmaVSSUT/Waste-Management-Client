@@ -10,7 +10,7 @@ import { useLayout } from "../../../lib/context/LayoutContext";
 
 const DefaultAppBar = () => {
 	const { toggleSidebar } = useLayout()
-
+ 
 	return ( 
 		
 		<AppBar 

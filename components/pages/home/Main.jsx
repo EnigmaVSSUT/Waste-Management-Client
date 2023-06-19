@@ -37,7 +37,7 @@ const Main = () => {
 						<p>USE</p>
 						<p>CYCLE</p>
 					</div>
-				</div>
+				</div> 
 				<div className="subtt" style={{display:"grid", fontSize:"1.9em", fontWeight:"900"}}>
 					CREATE A BETTER FUTURE
 				</div>
