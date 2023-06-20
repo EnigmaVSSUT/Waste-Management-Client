@@ -5,7 +5,6 @@ import photo from '../public/images/cleaninglogo.jpg'
 import styles from '/styles/register.module.css'
 import {Button, Stack, TextField,Typography} from '@mui/material';
 import UploadFileOutlinedIcon from '@mui/icons-material/UploadFileOutlined';
-//import { Controller, useForm } from "react-hook-form";
 
 
 
@@ -37,8 +36,6 @@ const register = () => {
       setpic(styles.pict);
       }
 
-      /*const { handleSubmit, control } = useForm();
-      const onSubmit = (data) => console.log(data);*/
 
   return (
     <div className={styles.main}>
