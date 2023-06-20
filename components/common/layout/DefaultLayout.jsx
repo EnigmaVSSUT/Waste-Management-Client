@@ -9,7 +9,7 @@ import DefaultSideBar from "../sidebar/DefaultSideBar";
 
 const Offset = styled('div')(({theme}) => theme.mixins.toolbar)
 
-const DefaultLayout = ({children}) => {
+const DefaultLayout = ({children}) => { 
 	
 	return (
 		<Stack

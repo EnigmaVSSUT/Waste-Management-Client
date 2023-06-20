@@ -1,95 +1,53 @@
 import { Button, Stack, Typography } from "@mui/material";
+// import Image from "../../../public/images/landing.jpg";
+// import Image from "./images/landing.jpg";
 import Image from "next/image";
 import Link from "next/link";
+// import styles from "../../../styles/globals.css";
+// import Images from '../public/images';
 
 const Main = () => {
 	return (
-		<Stack
-			padding='64px 32px'
-			gap='32px'
-			sx={(theme) => ({
-				// background: theme.palette.surface[10],
-				backgroundImage: 'images/landing_page.png',
-			})}
-		 >
-			<Image
-					src='/images/landing_page.png'
-					width={700}
-					height={349}
-					style={{
-						width: '100%',
-						maxWidth: '700px',
-					
-					}}
-					alt=""
-				/>
-			{/* <Stack
-				gap='32px'
-				alignItems='center'
-			>
-				<Image
-					src='/images/cfc-svg.svg'
-					width={700}
-					height={349}
-					style={{
-						width: '100%',
-						maxWidth: '700px',
-					
-					}}
-					alt=""
-				/>
-				<Stack
-					gap='8px'
-				>
-					<Typography
-						variant='display.small'
-						textAlign='center'
-					>
-						A mission to
-					</Typography>
-					<Typography
-						variant='display.large'
-						textAlign='center'
-					>
-						Keep VSSUT Clean
-					</Typography>
-				</Stack>
-				<Stack
-					direction='row'
-					justifyContent='center'
-					padding='10px'
-					gap='10px'
-				>
-					<Link
-						href='/report-filled'
-					>
-						<Button
-							variant='contained'
-						>
-							<Typography
-								variant='label.large'
-							>
-								Report filled dustbin
-							</Typography>
-						</Button>
-					</Link>
-					<Link
-						href='/new-dustbin'
-					>
-						<Button
-							variant='outlined'
-						>
-							<Typography
-								variant='label.large'
-							>
-								Request a dustbin
-							</Typography>
-						</Button>
-					</Link>
-				</Stack>
-			</Stack> */}
-		</Stack>
-	);
+		<div className="xyz">
+			<div style={{
+				backgroundImage: `url("/images/landing_adobe_express.svg")`,
+				height: '100vh',
+				// width: '100vh',
+				backgroundRepeat: 'no-repeat',
+				backgroundPosition: 'center center',
+
+				backgroundSize: 'cover',
+			}} />
+
+			<div className="textu" style={{
+				position: "absolute",
+				// right: "50%",
+				left: "50%",
+				margin:"auto",
+				top: "20%",
+				// width:"16em",
+				fontFamily: 'Poppins',
+			}}>
+				<div className="subt" style={{display:"grid",gridTemplateColumns:"1fr 1fr", height:"9rem", width:"18rem"}}>
+					<div className="subt1" style={{fontSize:"8em", fontWeight:"700"}}>
+						RE
+					</div>
+					<div className="subt2" style={{fontSize:"1.9em", fontWeight:"800", marginTop:"0.7em"}}>
+						<p>DUCE</p>
+						<p>USE</p>
+						<p>CYCLE</p>
+					</div>
+				</div> 
+				<div className="subtt" style={{display:"grid", fontSize:"1.9em", fontWeight:"900"}}>
+					CREATE A BETTER FUTURE
+				</div>
+			</div>
+			{/* <div className="mapi">
+			  <Image src="../../../public/images/Rectangle 4.png"  alt="error" />
+			</div>
+	 */}
+		</div>
+	)
 }
 
 export default Main;

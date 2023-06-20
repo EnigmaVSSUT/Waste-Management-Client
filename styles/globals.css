@@ -7,15 +7,25 @@
 	font-family: 'Product Sans';
 	src: url('/fonts/ProductSansRegular.ttf');
 }
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap'); */
+
 
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'Product Sans';
+	font-family: 'Product Sans'; 
 }
 
 a, a:visited, a:hover, a:active {
 	text-decoration: none;
 	color: #000000;
 }
+
+/* 
+.xy{
+    background: url('../components/pages/home/landing.jpg');
+} */
+/* .subt{
+
+} */

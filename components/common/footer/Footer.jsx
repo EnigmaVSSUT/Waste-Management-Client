@@ -3,9 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import footerLinks from "../../../lib/data/footer-links";
 
+
 const FooterLink = ({ item }) => (
 	<Stack
-		gap='10px'
+		gap='20px'
 	>
 		<Typography
 			variant='title.large'
@@ -13,8 +14,8 @@ const FooterLink = ({ item }) => (
 		>
 			{item.category}
 		</Typography>
-		<Stack
-			gap='8px'
+		<Stack 
+			gap='10px'
 			padding='10px 0'
 		>
 			{ item.links.map(link => (
@@ -35,6 +36,7 @@ const FooterLink = ({ item }) => (
 	</Stack>
 )
 
+
 const FooterBranding = () => (
 	<Stack
 		gap='16px'
@@ -43,11 +45,13 @@ const FooterBranding = () => (
 			md: 'row'
 		}}
 		alignItems='center'
+		// paddingLeft='20em'
 	>
 		<Image 
 			src='/images/vssut_logo.png'
-			width={108}
-			height={108}
+			width={80}
+			height={80}
+			alt="Logo"
 		/>
 		<Stack
 			gap='8px'
@@ -59,6 +63,7 @@ const FooterBranding = () => (
 			<Typography
 				variant='title.medium'
 				color='primary.99'
+				alignItems='center'
 				textAlign={{
 					xs: 'center',
 					md: 'left'
@@ -77,7 +82,7 @@ const FooterBranding = () => (
 				Waste Management System
 			</Typography>
 		</Stack>
-	</Stack>
+	 </Stack>
 )
 
 const LinkContainer = () => (
@@ -108,16 +113,16 @@ const Content = () => (
 const Footer = () => {
 	return (
 		<Stack
-			padding='64px 32px 32px'
+			padding='6px 2px 32px'
 			gap='24px'
 			alignItems='center'
-			bgcolor='primary.10'
+			bgcolor='#212121'
 		>
 			<Content />
 			<Divider 
 				flexItem
 				sx={{
-					borderColor: 'outline.500'
+					borderColor: 'common.white'
 				}}
 			/>
 			<Typography
