@@ -86,9 +86,10 @@ const DefaultAppBar = () => {
 					                   textColor:"black" }} variant="outlined" >
 							Admin Login
 						</Button>
-						<Button sx={{ marginLeft: "10px" }} variant="contained">
+						<a href="/register">
+						   <Button sx={{ marginLeft: "10px" }} variant="contained">
 							Register Complain
-						</Button>
+						   </Button></a>
 						{/* </Buttons> */}
 					</Tabs>
 
