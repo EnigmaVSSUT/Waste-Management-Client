@@ -7,14 +7,9 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-//import * as React from 'react';
-import { shadows } from '@mui/system';
-import PropTypes from 'prop-types';
 import CircularProgress from '@mui/material/CircularProgress';
 import styles from '../styles/Viewcomplain.module.css';
-
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import { Divider, Stack, Typography, Grid, Container } from "@mui/material";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
