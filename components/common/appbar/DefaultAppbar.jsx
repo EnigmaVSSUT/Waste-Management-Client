@@ -91,7 +91,9 @@ const DefaultAppBar = () => {
 
 							textColor: "#D97D54"}}
 							 label="Home" />
+							 <a href="/Viewcomplain">
 						<Tab label="View Complain" />
+						</a>
 						
 						<Button sx={{ marginLeft: "auto",
 					                   textColor:"black",  }} variant="outlined" >
