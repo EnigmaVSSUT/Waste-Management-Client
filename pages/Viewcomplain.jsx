@@ -1,218 +1,186 @@
-import React from 'react'
-import { styled } from "@mui/material/styles";
-import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
-import TableCell, { tableCellClasses } from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TableRow from "@mui/material/TableRow";
-import Paper from "@mui/material/Paper";
-//import * as React from 'react';
-import { shadows } from '@mui/system';
-import PropTypes from 'prop-types';
-import CircularProgress from '@mui/material/CircularProgress';
-import styles from '../styles/Viewcomplain.module.css';
+import React from "react";
+import { useEffect, useState } from "react";
+import { Stack, Box, CircularProgress } from "@mui/material";
+import styles from "../styles/Viewcomplain.module.css";
+import MaterialTable from "material-table";
 
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import { Divider, Stack, Typography, Grid, Container } from "@mui/material";
+import { forwardRef } from "react";
 
-const StyledTableCell = styled(TableCell)(({ theme }) => ({
-    [`&.${tableCellClasses.head}`]: {
-        backgroundColor: theme.palette.common.grey,
-        color: theme.palette.common.black,
+import AddBox from "@material-ui/icons/AddBox";
+import ArrowDownward from "@material-ui/icons/ArrowDownward";
+import Check from "@material-ui/icons/Check";
+import ChevronLeft from "@material-ui/icons/ChevronLeft";
+import ChevronRight from "@material-ui/icons/ChevronRight";
+import Clear from "@material-ui/icons/Clear";
+import DeleteOutline from "@material-ui/icons/DeleteOutline";
+import Edit from "@material-ui/icons/Edit";
+import FilterList from "@material-ui/icons/FilterList";
+import FirstPage from "@material-ui/icons/FirstPage";
+import LastPage from "@material-ui/icons/LastPage";
+import Remove from "@material-ui/icons/Remove";
+import SaveAlt from "@material-ui/icons/SaveAlt";
+import Search from "@material-ui/icons/Search";
+import ViewColumn from "@material-ui/icons/ViewColumn";
 
-    },
-    [`&.${tableCellClasses.body}`]: {
-        fontSize: 14,
-    },
-
-}));
-const ColoredTableCell = styled(TableCell)(({ theme }) => ({
-    [`&.${tableCellClasses.head}`]: {
-        backgroundColor: theme.palette.common.black,
-        color: theme.palette.common.white,
-    },
-
-}));
-
-const StyledTableRow = styled(TableRow)(({ theme }) => ({
-    "&:nth-of-type(odd)": {
-        backgroundColor: theme.palette.action.hover,
-    },
-    // hide last border
-    "&:last-child td, &:last-child th": {
-        border: 0,
-    },
-}));
-const header = ['Complain No.', 'Dustbin No.', 'Location', 'Date', 'Status', 'Issued By']
-const data = [['rl11', 'rl12', 'rl13', '111', '222', '333'], ['rl21', 'rl22', 'rl23', '111', '222', '333'], ['r31', 'rl32', 'rl33', '111', '222', '333']]
-
-
-const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-    ...theme.typography.body2,
-    padding: theme.spacing(3),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-}));
-
+const tableIcons = {
+	Add: forwardRef((props, ref) => <AddBox {...props} ref={ref} />),
+	Check: forwardRef((props, ref) => <Check {...props} ref={ref} />),
+	Clear: forwardRef((props, ref) => <Clear {...props} ref={ref} />),
+	Delete: forwardRef((props, ref) => <DeleteOutline {...props} ref={ref} />),
+	DetailPanel: forwardRef((props, ref) => (
+		<ChevronRight {...props} ref={ref} />
+	)),
+	Edit: forwardRef((props, ref) => <Edit {...props} ref={ref} />),
+	Export: forwardRef((props, ref) => <SaveAlt {...props} ref={ref} />),
+	Filter: forwardRef((props, ref) => <FilterList {...props} ref={ref} />),
+	FirstPage: forwardRef((props, ref) => <FirstPage {...props} ref={ref} />),
+	LastPage: forwardRef((props, ref) => <LastPage {...props} ref={ref} />),
+	NextPage: forwardRef((props, ref) => <ChevronRight {...props} ref={ref} />),
+	PreviousPage: forwardRef((props, ref) => (
+		<ChevronLeft {...props} ref={ref} />
+	)),
+	ResetSearch: forwardRef((props, ref) => <Clear {...props} ref={ref} />),
+	Search: forwardRef((props, ref) => <Search {...props} ref={ref} />),
+	SortArrow: forwardRef((props, ref) => (
+		<ArrowDownward {...props} ref={ref} />
+	)),
+	ThirdStateCheck: forwardRef((props, ref) => (
+		<Remove {...props} ref={ref} />
+	)),
+	ViewColumn: forwardRef((props, ref) => <ViewColumn {...props} ref={ref} />),
+};
 
 function Viewcomplain() {
-    return (
+	const [tableData, setTableData] = useState([
+		{
+			complainNo: "0001",
+			dustbinNo: "D-01",
+			location: "CCD",
+			date: "19/06/2023",
+			status: "Open",
+			issuedBy: "ABC",
+		},
+		{
+			complainNo: "0002",
+			dustbinNo: "D-02",
+			location: "Canteen",
+			date: "19/06/2023",
+			status: "Open",
+			issuedBy: "ABC",
+		},
+		{
+			complainNo: "0003",
+			dustbinNo: "D-03",
+			location: "Admin Block",
+			date: "19/06/2023",
+			status: "Open",
+			issuedBy: "ABC",
+		},
+		{
+			complainNo: "0004",
+			dustbinNo: "D-04",
+			location: "CCD",
+			date: "19/06/2023",
+			status: "Open",
+			issuedBy: "ABC",
+		},
+		{
+			complainNo: "0005",
+			dustbinNo: "D-05",
+			location: "Canteen",
+			date: "19/06/2023",
+			status: "Open",
+			issuedBy: "ABC",
+		},
+		{
+			complainNo: "0006",
+			dustbinNo: "D-06",
+			location: "CCD",
+			date: "19/06/2023",
+			status: "Open",
+			issuedBy: "ABC",
+		},
+	]);
 
-        <Stack>
+	const columns = [
+		{ title: "Complain No.", field: "complainNo" },
+		{ title: "Dustbin No.", field: "dustbinNo" },
+		{ title: "Location", field: "location" },
+		{ title: "Date", field: "date" },
+		{ title: "Status", field: "status" },
+		{ title: "Issued By", field: "issuedBy" },
+	];
 
-            <Box sx={{ height: '20vh', p: 3, m: 4, borderRadius: 3, boxShadow: 4, flexGrow: 1 }} >
-                <h3>COMPLAIN OVERVIEW</h3>
-                <div className={styles.container}>
-                    <div className={styles.overview}>
-                        <span className={styles.open}>
-                            <div className={styles.l1}></div>
-                            <p>OPEN</p>
-                            <h1 className={styles.openNo}>02</h1>
-                        </span>
-                        <span className={styles.progress}>
-                            <div className={styles.l1}></div>
-                            <p>IN PROGRESS</p>
-                            <h1 className={styles.progressNo}>08</h1>
-                        </span>
-                        <span className={styles.close}>
-                            <div className={styles.l1}></div>
-                            <p>CLOSED</p>
-                            <h1 className={styles.closeNo}>10</h1>
-                        </span>
-                    </div>
+	return (
+		<Stack>
+			<Box
+				sx={{
+					height: "20vh",
+					p: 3,
+					m: 4,
+					borderRadius: 3,
+					boxShadow: 4,
+					flexGrow: 1,
+				}}
+			>
+				<h3>Complain Overview</h3>
+				<div className={styles.container}>
+					<div className={styles.overview}>
+						<span className={styles.open}>
+							<div className={styles.l1}></div>
+							<p>OPEN</p>
+							<h1 className={styles.openNo}>02</h1>
+						</span>
+						<span className={styles.progress}>
+							<div className={styles.l1}></div>
+							<p>IN PROGRESS</p>
+							<h1 className={styles.progressNo}>08</h1>
+						</span>
+						<span className={styles.close}>
+							<div className={styles.l1}></div>
+							<p>CLOSED</p>
+							<h1 className={styles.closeNo}>10</h1>
+						</span>
+					</div>
 
+					<div className={styles.progressChart}>
+						<CircularProgress
+							size="7vw"
+							variant="determinate"
+							value={75}
+						/>
+						<div className={styles.percent}>75%</div>
+					</div>
 
-                    <div className={styles.progressChart}><CircularProgress size="7vw" variant="determinate" value={75} />
-                        <div className={styles.percent}>75%</div>
-                    </div>
+					<div className={styles.index}>
+						<div className={styles.greenC}></div>
+						<p className={styles.colors1}> Closed/In progress</p>
+						<div className={styles.whiteC}></div>
+						<p className={styles.colors2}>Open</p>
+					</div>
+				</div>
+			</Box>
 
-                    <div className={styles.index}>
-                        <div className={styles.greenC}></div>
-                        <p className={styles.colors1}> Closed/In progress</p>
-                        <div className={styles.whiteC}></div>
-                        <p className={styles.colors2}>Open</p>
-                    </div>
+			<MaterialTable
+				columns={columns}
+				data={tableData}
+				icons={tableIcons}
+				title=""
+				options={{ search: false, actionsColumnIndex: -1 }}
+				// editable={{
+				//     onRowUpdate:(newRow,oldRow)=>new Promise((resolve,reject)=>{
+				//         const updatedData=[...tableData]
+				//         updatedData[oldRow.tableData.id]=newRow
+				//         setTableData(updatedData
+				//             )
+				//         console.log(newRow,oldRow)
 
-
-                </div>
-
-
-
-
-
-            </Box>
-
-
-
-
-            <TableContainer component={Paper}>
-                <Table sx={{ minWidth: 700 }} aria-label="customized table">
-                    <TableHead>
-                        <TableRow>
-                            <StyledTableCell align="center">{header[0]}</StyledTableCell>
-                            <StyledTableCell align="center">{header[1]}</StyledTableCell>
-                            <StyledTableCell align="center">{header[2]}</StyledTableCell>
-                            <StyledTableCell align="center">{header[3]}</StyledTableCell>
-                            <StyledTableCell align="center">{header[4]}</StyledTableCell>
-                            <StyledTableCell align="center">{header[5]}</StyledTableCell>
-                        </TableRow>
-                    </TableHead>
-                    <TableBody>
-                        {data
-                            .map((row) => {
-                                const WhichTableCell = row[2] === 'rl23' ? ColoredTableCell : StyledTableCell
-                                return (
-                                    <StyledTableRow key={row}>
-                                        <WhichTableCell align="center">{row[0]}</WhichTableCell>
-                                        <WhichTableCell align="center">{row[1]}</WhichTableCell>
-                                        <WhichTableCell align="center">{row[2]}</WhichTableCell>
-                                        <WhichTableCell align="center">{row[3]}</WhichTableCell>
-                                        <WhichTableCell align="center">{row[4]}</WhichTableCell>
-                                        <WhichTableCell align="center">{row[5]}</WhichTableCell>
-                                    </StyledTableRow>
-                                )
-                            })}
-                    </TableBody>
-                </Table>
-            </TableContainer>
-
-
-        </Stack>
-
-    )
+				//         setTimeout(()=>resolve(),500)
+				//     })
+				// }}
+			/>
+		</Stack>
+	);
 }
 
-
-
-
-
-export default Viewcomplain
-
-
-
-//export default function BoxComponent() {
-  //return (
-    //<Box component="span" sx={{ p: 2, border: '1px dashed grey' }}>
-     // <Button>Save</Button>
-    //</Box>
-  //);
-//}
-
-
-// export default function CustomizedTables() {
-//     const header = ['Complain No.', 'Dustbin No.', 'Location','Date','Status','Issued By']
-//     const data = [['rl11', 'rl12', 'rl13','111','222','333'], ['rl21', 'rl22', 'rl23','111','222','333'], ['r31', 'rl32', 'rl33','111','222','333']]
-
-//     // const
-//     return (
-//         <TableContainer component={Paper}>
-//             <Table sx={{ minWidth: 700 }} aria-label="customized table">
-//                 <TableHead>
-//                     <TableRow>
-//                         <StyledTableCell align="center">{header[0]}</StyledTableCell>
-//                         <StyledTableCell align="center">{header[1]}</StyledTableCell>
-//                         <StyledTableCell align="center">{header[2]}</StyledTableCell>
-//                         <StyledTableCell align="center">{header[3]}</StyledTableCell>
-//                         <StyledTableCell align="center">{header[4]}</StyledTableCell>
-//                         <StyledTableCell align="center">{header[5]}</StyledTableCell>
-//                     </TableRow>
-//                 </TableHead>
-//                 <TableBody>
-//                     {data
-//                         .map((row) => {
-//                             const WhichTableCell = row[2] === 'rl23' ? ColoredTableCell : StyledTableCell
-//                             return (
-//                                 <StyledTableRow key={row}>
-//                                     <WhichTableCell align="center">{row[0]}</WhichTableCell>
-//                                     <WhichTableCell align="center">{row[1]}</WhichTableCell>
-//                                     <WhichTableCell align="center">{row[2]}</WhichTableCell>
-//                                     <WhichTableCell align="center">{row[3]}</WhichTableCell>
-//                                     <WhichTableCell align="center">{row[4]}</WhichTableCell>
-//                                     <WhichTableCell align="center">{row[5]}</WhichTableCell>
-//                                 </StyledTableRow>
-//                             )
-//                         })}
-//                 </TableBody>
-//             </Table>
-//         </TableContainer>
-//     );
-// }
-
-
-/* <Grid container spacing={4}>
-        <Grid xs display="flex" justifyContent="center" alignItems="center">
-          <Item>current state</Item>
-        </Grid>
-        <Grid xs={2} display="flex" justifyContent="center" alignItems="center">
-          <Item><CircularProgress  variant="determinate" value={75} />
-                            <Typography variant="caption" component="div" color="text.secondary">
-                                {'75%'}
-                            </Typography></Item>
-        </Grid>
-        <Grid xs display="flex" justifyContent="center" alignItems="center">
-          <Item>index</Item>
-        </Grid>
-      </Grid> */
+export default Viewcomplain;
